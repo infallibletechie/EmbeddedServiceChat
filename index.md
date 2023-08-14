@@ -96,8 +96,12 @@
         </script>
 
         <script>
-                document.onkeyup = function(e) {
-                        if ( e.which == 115 ) {
+                document.addEventListener( 'keyup', ( event ) => {
+                        console.log(
+                                'Key is',
+                                event.key
+                        );
+                        if ( event.key == 115 ) {
                                 console.log(
                                         "S key was pressed"
                                 );
