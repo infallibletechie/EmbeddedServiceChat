@@ -101,7 +101,7 @@
                                 'Key is',
                                 event.key
                         );
-                        if ( event.key == 115 ) {
+                        if ( event.key == 's' ) {
                                 console.log(
                                         "S key was pressed"
                                 );
