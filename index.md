@@ -94,4 +94,22 @@
                         false
                 );
         </script>
+
+        <script>
+                document.onkeyup = function(e) {
+                        if ( e.which == 115 ) {
+                                console.log(
+                                        "S key was pressed"
+                                );
+                                embedded_svc.liveAgentAPI.startChat({
+                                        directToAgentRouting: {
+                                                buttonId: "5735f000000Tm6g",
+                                                fallback: true
+                                        },
+                                        extraPrechatInfo: [],
+                                        extraPrechatFormDetails: []
+                                });
+                        }
+                };
+        </script>
 </html>
