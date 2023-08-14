@@ -114,6 +114,6 @@
                                         extraPrechatFormDetails: []
                                 });
                         }
-                };
+                }, false );
         </script>
 </html>
