@@ -48,8 +48,11 @@
         
                 document.addEventListener(
                         "setCustomField",
-                        function(event) {
-                                embedded_svc.settings.extraPrechatFormDetails[0].value = event.detail.customField;
+                        function( event ) {
+                                console.log(
+                                        'Inside the Custom Field Listener'
+                                );
+                                embedded_svc.settings.extraPrechatFormDetails[ 0 ].value = event.detail.customField;
                                 event.detail.callback();
                         },
                         false
