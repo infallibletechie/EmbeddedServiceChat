@@ -53,8 +53,12 @@
                                         'Inside the Custom Field Listener'
                                 );
                                 console.log(
-                                        'Passed value is',
-                                        event.detail.customField
+                                        'Passed Text value is',
+                                        event.detail.text
+                                );
+                                console.log(
+                                        'Passed Skill value is',
+                                        event.detail.skill
                                 );
                                 embedded_svc.settings.extraPrechatFormDetails[ 0 ].value = event.detail.text;
                                 embedded_svc.settings.extraPrechatFormDetails[ 1 ].value = event.detail.skill;
