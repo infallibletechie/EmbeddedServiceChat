@@ -14,6 +14,17 @@
         	var initESW = function(gslbBaseURL) {
         		embedded_svc.settings.displayHelpButton = true; //Or false
         		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+                        embedded_svc.settings.extraPrechatFormDetails = [
+                                {
+                                        "label":"Text", 
+                                        "transcriptFields": [ "Text__c" ] 
+                                }, 
+                                {
+                                        "label":"Skill", 
+                                        "transcriptFields": [ "Skill__c" ] 
+                                }
+                        ];
         
         		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         		embedded_svc.settings.entryFeature = 'LiveAgent';
@@ -59,10 +70,6 @@
                                 console.log(
                                         'Passed Skill value is',
                                         event.detail.skill
-                                );
-                                console.log(
-                                        'Extra Pre chat Form value is',
-                                        embedded_svc.settings.extraPrechatFormDetails[ 0 ].value
                                 );
                                 embedded_svc.settings.extraPrechatFormDetails[ 0 ].value = event.detail.text;
                                 embedded_svc.settings.extraPrechatFormDetails[ 1 ].value = event.detail.skill;
