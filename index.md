@@ -15,6 +15,13 @@
         		embedded_svc.settings.displayHelpButton = true; //Or false
         		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
+        		embedded_svc.settings.prepopulatedPrechatFields = {
+        		    FirstName: "Test",
+        		    LastName: "Test",
+        		    Email: "test@test.com",
+        		    Subject: "Test Subject"
+        		};
+
                         embedded_svc.settings.extraPrechatFormDetails = [
                                 {
                                         "label":"Text", 
