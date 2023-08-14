@@ -56,7 +56,8 @@
                                         'Passed value is',
                                         event.detail.customField
                                 );
-                                embedded_svc.settings.extraPrechatFormDetails[ 0 ].Text__c = event.detail.customField;
+                                embedded_svc.settings.extraPrechatFormDetails[ 0 ].value = event.detail.text;
+                                embedded_svc.settings.extraPrechatFormDetails[ 1 ].value = event.detail.skill;
                                 event.detail.callback();
                         },
                         false
