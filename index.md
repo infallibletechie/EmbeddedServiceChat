@@ -30,10 +30,6 @@
                                 {
                                         "label":"Skill", 
                                         "transcriptFields": [ "Skill__c" ] 
-                                }, 
-                                {
-                                        "label":"Transcript", 
-                                        "transcriptFields": [ "Transcript__c" ] 
                                 }
                         ];
         
@@ -84,11 +80,6 @@
                                 );
                                 embedded_svc.settings.extraPrechatFormDetails[ 0 ].value = event.detail.text;
                                 embedded_svc.settings.extraPrechatFormDetails[ 1 ].value = event.detail.skill;
-                                if (event.detail.transcript && event.detail.transcript.length > 131072) {
-                                    embedded_svc.settings.extraPrechatFormDetails[ 2 ].value = event.detail.transcript.slice(0, 131070);
-                                } else {
-                                    embedded_svc.settings.extraPrechatFormDetails[ 2 ].value = event.detail.transcript;
-                                }
                                 event.detail.callback();
                         },
                         false
